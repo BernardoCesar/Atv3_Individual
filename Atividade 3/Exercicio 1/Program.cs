@@ -24,10 +24,10 @@ namespace Projeto {
 						int pixelsTotais = bitmapEntrada.Width * bitmapEntrada.Height;
 
 						for (int e = 0, s = 0; s < pixelsTotais; e += 4, s++) {
-							if((entrada[e+1] > entrada[e] ) && (entrada[e+1] > entrada[e+2])){
-								saida[s] = 0;
-							}else{
+							if(entrada[e] == 255 && entrada[e+1] == 255 && entrada[e+2]== 255){
 								saida[s] = 255;
+							}else{
+								saida[s] = 0;
 							}
 						}
 
